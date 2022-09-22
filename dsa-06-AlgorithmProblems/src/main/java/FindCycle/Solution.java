@@ -16,7 +16,18 @@ public class Solution {
         System.out.println(hasCycle(n1));
     }
     public static boolean hasCycle(ListNode head) {
+HashSet<ListNode> visted = new HashSet<>();
+//set current to head
+        ListNode current = head;
+        while (current!= null){
 
+            if (visted.contains(current)){
+                return true;
+            }
+                visted.add(current);
+
+            current=current.next;
+        }
         return false;
     }
 }
