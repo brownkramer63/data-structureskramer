@@ -24,6 +24,7 @@ public class PrintMiddleNode {
         }
         else {
             System.out.println(a.id+","+a.next.id);
+            //for even linkedlist
         }
 
     }
