@@ -9,7 +9,22 @@ public class PrintMiddleNode {
         printMiddle(sll);
     }
     public static void printMiddle(MySinglyLinkedList sll){
+    //create two pointers solution for this
+        Node a = sll.head;
+        Node b = sll.head;
+        //iterate over the linked list
+        while (b!=sll.tail && b.next!=sll.tail){
 
+            a=a.next;// 1 jump
+            b=b.next.next; //2 jump
+
+        }
+        if (b==sll.tail){
+            System.out.println(a.id);
+        }
+        else {
+            System.out.println(a.id+","+a.next.id);
+        }
 
     }
 
