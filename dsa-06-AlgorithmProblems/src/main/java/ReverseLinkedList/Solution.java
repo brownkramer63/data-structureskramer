@@ -11,6 +11,20 @@ public class Solution {
         list.printNodes();
     }
      static void reverse(MySinglyLinkedList list) {
+// creat two pointers
+         Node prev = list.head;
+         Node current =list.head.next;
 
+         while(current!=null){
+             Node nextNode = current.next;
+             current.next=prev;
+             prev=current;
+             current=nextNode;
+         }
+         //now adjust the tail and head
+
+         list.tail=list.head;
+         list.tail.next=null;
+         list.head=prev;
     }
 }
