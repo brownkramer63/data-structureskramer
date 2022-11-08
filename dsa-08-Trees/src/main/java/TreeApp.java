@@ -8,7 +8,8 @@ public class TreeApp {
         }
          VisualizeTree.printTree(tree.root,null,false);
 
-tree.preOrderTraversal(tree.root);
+//tree.preOrderTraversal(tree.root);
 
+        System.out.println(tree.contains(8));
     }
 }

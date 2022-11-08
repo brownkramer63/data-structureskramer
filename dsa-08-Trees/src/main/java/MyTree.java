@@ -36,7 +36,7 @@ public class MyTree {
     // root left right
     void preOrderTraversal(TNode root){
         if (root==null) return;
-        System.out.println(root.value);
+        System.out.println(root.value+", ");
         preOrderTraversal(root.leftChild);
         preOrderTraversal(root.rightChild);
     }
@@ -63,4 +63,20 @@ public class MyTree {
             if (toVisit.rightChild!=null) queue.add(toVisit.rightChild);
 
         }
-}}
+}
+public boolean contains(int value){
+        if (root==null) return false;
+        TNode current= root;
+        while (current!=null){
+            if (value<current.value) current=current.leftChild;
+            else if (value> current.value)
+                current=current.rightChild;
+               else return true;
+
+        }
+
+
+  return false;
+}
+
+}
