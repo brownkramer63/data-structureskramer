@@ -101,6 +101,11 @@ int countLeaves(TNode root){
     return countLeaves(root.leftChild)+countLeaves((root.rightChild));
 
 }
+int height(TNode root){
+        if (root==null) return -1;
+        if (isLeaf(root)) return 0;
+        return 1+Math.max(height(root.leftChild),height(root.rightChild));
+}
 
 //end
 }
