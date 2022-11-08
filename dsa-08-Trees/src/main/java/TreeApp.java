@@ -11,5 +11,8 @@ public class TreeApp {
 //tree.preOrderTraversal(tree.root);
 
         System.out.println(tree.contains(8));
+        tree.printLeaves(tree.root);
+        System.out.println();
+        System.out.println("number of leaves: "+ tree.countLeaves(tree.root));
     }
 }

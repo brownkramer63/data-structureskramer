@@ -78,5 +78,29 @@ public boolean contains(int value){
 
   return false;
 }
+public boolean isLeaf(TNode node){
+        return node.leftChild==null && node.rightChild==null;
 
+
+}
+
+    public void printLeaves(TNode root){
+        if (root==null) return;
+        // perform visit on Root
+
+        // Recursively Branch Left Subtree
+        printLeaves(root.leftChild);
+        printLeaves(root.rightChild);
+        if (isLeaf(root)) System.out.print(root.value + ", ");
+
+        // Recursively Branch Right Subtree
+    }
+int countLeaves(TNode root){
+    if (root==null) return 0;
+    if (isLeaf(root)) return 1;
+    return countLeaves(root.leftChild)+countLeaves((root.rightChild));
+
+}
+
+//end
 }
