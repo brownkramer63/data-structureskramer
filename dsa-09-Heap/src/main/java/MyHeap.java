@@ -53,7 +53,7 @@ public class MyHeap {
     public boolean isValidParent(int index){
         if (!hasLeftChild(index)) return true;
         else {
-            boolean isValid=false;
+            boolean isValid=(items[index]>=items[leftChildIndex(index)]);
             if (hasRightChild(index)) {
                 isValid= (items[index]>=items[leftChildIndex(index)]&&items[index]>=items[rightChildIndex(index)]);
             }
